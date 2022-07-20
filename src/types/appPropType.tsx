@@ -1,12 +1,18 @@
 import { complete, incomplete } from './storeType'
-import { deleteJobActionCreator, markCompleteActionCreator, markInCompleteActionCreator } from './actionCreatorType'
+import {
+    deleteCompleteActionCreator,
+    deleteInCompleteActionCreator,
+    markCompleteActionCreator,
+    markInCompleteActionCreator,
+} from './actionCreatorType'
 
 interface appPropType {
-    complete: complete,
-    incomplete: incomplete,
-    deleteJob: deleteJobActionCreator,
-    markComplete: markCompleteActionCreator,
-    markIncomplete: markInCompleteActionCreator,
+    complete: complete
+    incomplete: incomplete
+    deleteComplete: deleteCompleteActionCreator
+    deleteInComplete: deleteInCompleteActionCreator
+    markComplete: markCompleteActionCreator
+    markInComplete: markInCompleteActionCreator
 }
 
-export default appPropType;
+export default appPropType

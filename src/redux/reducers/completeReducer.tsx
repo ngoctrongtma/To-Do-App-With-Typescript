@@ -1,20 +1,27 @@
-import { Reducer } from 'redux';
-import { markCompleteAction, markInCompleteAction, deleteJobAction } from '../../types/actionType'
-import { complete, incomplete } from '../../types/storeType';
-import storetype from '../../types/storeType';
+import { Reducer } from 'redux'
+import {
+    markCompleteAction,
+    deleteCompleteAction,
+} from '../../types/actionType'
+import { complete } from '../../types/storeType'
 
-const initialState: complete = [];
+const initialState: complete = []
 
-const completeReducer: Reducer<complete, deleteJobAction | markCompleteAction | markInCompleteAction> = (state = initialState, action) => {
+const completeReducer: Reducer<
+    complete,
+    deleteCompleteAction | markCompleteAction
+> = (state = initialState, action) => {
     switch (action.type) {
-        case "MARK_COMPLETE":
+        case 'MARK_COMPLETE':
             return [...state, action.jobName]
-        case "MARK_INCOMPLETE":
-            return [...state, action.jobName]
-        case "DELETE_JOB":
-            return [...state.filter((jobName) => { jobName !== action.jobName })]
+        case 'DELETE_COMPLETE':
+            return [
+                ...state.filter((jobName) => {
+                    return jobName !== action.jobName
+                }),
+            ]
         default:
-            return [...state];
+            return [...state]
     }
 }
 export default completeReducer

@@ -1,10 +1,9 @@
-type complete = String[];
-type incomplete = String[];
-
+type complete = String[]
+type incomplete = String[]
 
 interface storeType {
-    complete: complete,
-    imcomplete: incomplete,
+    complete: complete
+    incomplete: incomplete
 }
-export type {complete, incomplete}
-export default storeType;
+export type { complete, incomplete }
+export default storeType

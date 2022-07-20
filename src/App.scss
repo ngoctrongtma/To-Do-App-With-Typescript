@@ -1,4 +1,57 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
+.to-do-app-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 221, 127);
+    border-radius: 15px;
+    min-height: 800px;
+    margin-top: 35px;
+    .to-do-app-wrap {
+        border-radius: 10px;
+        background-color: aliceblue;
+        border: 2px sandybrown solid;
+        margin-top: 25px;
+        height: 700px;
+        width: 400px;
+        padding: 35px;
 
+        .to-do-app__header {
+        }
+        .to-do-app__content {
+            margin: 5px;
+            border: 1px solid;
+            border-radius: 10px;
+            overflow: auto;
+            height: 80%;
+            ul {
+                padding: 5px;
+                li {
+                    font-size: 20px;
+                    color: rgb(117, 117, 117);
+                    list-style: none;
+                    border-bottom: 1px solid rgb(117, 117, 117);
+                    padding: 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    button {
+                        margin-right: 5px;
+                    }
+                    .job-is-done {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+        .to-do-app__footer {
+            .btn-show-list {
+                margin-top: 5px;
+                padding: 5px;
+                button {
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}
